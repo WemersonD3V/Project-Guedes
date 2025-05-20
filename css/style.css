@@ -113,7 +113,7 @@ header>div,
 
 #cabecalho nav {
     position: absolute;
-    top: 15%;
+    top: 17%;
     left: 0;
     width: 100%;
     color: white;
@@ -356,7 +356,7 @@ header>div,
 
 #specialists .solo-specialist img {
     filter: grayscale(100%);
-    transition: filter 4.0s ease-in-out;
+    transition: filter 3.0s ease-in-out;
 }
 
 #specialists .solo-specialist img.visible {
@@ -446,6 +446,8 @@ header>div,
 #gallery-img img {
     width: 105%;
     margin-bottom: 15px;
+    box-shadow: 3px 3px 9px #00000045;
+    border-radius: 5px;
 
 }
 
@@ -584,7 +586,7 @@ footer div a {
 #btnSide {
     position: fixed;
     right: 15px;
-    bottom: 40px;
+    bottom: 15px;
     z-index: 12;
     background-color: transparent;
     width: 60px;
@@ -598,7 +600,7 @@ footer div a {
     position: fixed;
     left: 15px;
     /* Define a posição à esquerda */
-    bottom: 40px;
+    bottom: 15px;
     /* Fica na parte inferior */
     z-index: 10;
     /* Sobre todos os elementos */
@@ -633,3 +635,14 @@ footer div a {
     margin: 50px;
     color: #000;
 }
+
+@media (min-width: 460px) and (max-width: 800px) {
+    body {
+        max-width: 800px;
+    }
+    #specialists .solo-specialist .text{ margin: -84px 0px -9px 226px;
+        padding-right: 342px;
+    }
+      
+
+} 
