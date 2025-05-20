@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    overflow-x: hidden; /* Impede scroll lateral */
+    width: 100vw; /* Garante que o conteúdo não ultrapasse a largura da tela */
+}
+
+body {
+    max-width: 480px;
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    text-align: center;
+    background-color: transparent;
+
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #FFC947;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-family: "Oswald", sans-serif;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    width: 200px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+
+
+
+    background-image: url('../image/imagem-cabecalho.png');
+    background-position: center left;
+    background-size: cover;
+}
+
+header>div,
+#pircing-promotion>div {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.503);
+}
+
+#cabecalho {
+    height: 15vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50%;
+}
+
+#cabecalho img {
+    width: 90px;
+    border-radius: 50%;
+    box-shadow: 2px solid #E6AA42;
+}
+
+#menu-hamburg  i{
+   font-size: 1.8rem;
+
+}
+
+
+
+
+#cabecalho nav {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    color: white;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#cabecalho nav.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#cabecalho nav ul {
+    width: 100vw;
+    list-style: none;
+    background-color: #fff;
+
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 700;
+
+}
+
+#cabecalho nav ul li {
+    margin-bottom: 8px;
+}
+
+#cabecalho nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+
+}
+
+#content-cabecalho {
+    height: 70vh;
+    padding: 140px 15px 0 15px;
+    background-color: #ffffff00;
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+
+}
+
+#content-cabecalho h1 {
+    text-align: center;
+
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#content-cabecalho h2 {
+    text-align: center;
+
+
+    margin-bottom: 81px;
+
+}
+
+@keyframes borda-circulando {
+    0% { border: 1px solid red; }
+    50% { border: 1px solid yellow; }
+    100% { border: 1px solid red; }
+}
+#content-cabecalho .button {
+
+    border: 3px solid rgb(255, 255, 255);
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: 1s ease-in-out all;
+    animation: borda-circulando 4s infinite linear;
+
+
+
+
+}
+ 
+
+
+
+
+#content-cabecalho .button a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+
+
+}
+
+#history-aboutus {
+    padding: 1rem;
+
+}
+
+#history-aboutus h2 {
+    margin: 30px 0 5px 0;
+
+}
+
+#history-aboutus h1 {
+    margin: 0 0 25px 0;
+    letter-spacing: -1px;
+
+
+
+
+}
+
+#history-aboutus p {
+    margin-bottom: 30px;
+    color: #555;
+
+}
+
+#history-aboutus .img-history {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#pircing-promotion {
+
+    background-image: url('../image/piercing-background.png');
+    background-position: center;
+    background-size: cover;
+
+}
+
+#pircing-promotion>div {
+    padding: 3rem;
+}
+
+#pircing-promotion h3 {
+    font-size: 1.7rem;
+    margin: 20px 0 20px 0;
+    color: #FFC947;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+#pircing-promotion h3:nth-child(2) {
+    color: #fff;
+}
+
+#pircing-promotion .button {
+    border: 3px solid #FFC947;
+    padding: 8px 25px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+
+#pircing-promotion .button a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+
+
+}
+
+#pircing-promotion p {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    margin-top: 15px;
+}
+
+#team-specialist {
+    padding: 1rem;
+
+}
+
+#team-specialist div {
+    margin-top: 15px;
+    text-align: center;
+
+}
+
+#team-specialist i {
+    font-size: 4rem;
+}
+
+#team-specialist h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+#team-specialist p {
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #555;
+
+}
+
+#specialists {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#specialists a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#specialists .solo-specialist img {
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+#specialists .solo-specialist img {
+    filter: grayscale(100%);
+    transition: filter 4.0s ease-in-out;
+}
+
+#specialists .solo-specialist img.visible {
+    filter: grayscale(0%) !important;
+}
+
+#specialists .solo-specialist .text {
+    width: 100%;
+    height: 240px;
+    background: url('../image/tinta-borrada.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: -84px 0px -9px 29px;
+    position: relative;
+    z-index: 999;
+
+
+
+
+
+}
+
+#specialists .solo-specialist .text span i {
+    font-size: 1rem !important;
+    margin-right: 5px;
+}
+
+#specialists .solo-specialist .text span {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    display: block;
+    padding-right: 15%;
+
+
+}
+
+#specialists .solo-specialist .text span:nth-child(1) {
+    color: #FFC947;
+
+
+}
+
+#gallery-content {
+    padding: 1rem;
+    margin-top: 15px;
+
+}
+
+#gallery-content .logo-insta {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#gallery-content .logo-insta img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#gallery-content .logo-insta a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    margin: 10px 0;
+
+}
+
+#gallery-content h3 {
+    font-weight: 400;
+    font-size: 30px;
+
+}
+
+#gallery-img {
+    padding: 1rem;
+}
+
+#gallery-img img {
+    width: 105%;
+    margin-bottom: 15px;
+
+}
+
+#gallery-content .button {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+
+
+
+
+}
+
+#gallery-content .button a {
+    padding: 15px;
+    text-decoration: none;
+    border: 1px solid #FFC947;
+    border-radius: 5px;
+
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+
+
+
+}
+
+#gallery-content .button a i {
+    color: #FFC947 !important;
+    margin-right: 5px;
+}
+
+#budget {
+    height: 50vh;
+    background: url('../image/orcamento.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#budget>div {
+    width: 100%;
+
+    padding: 70px 15px 0 15px;
+    background-color: #0400006a;
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+}
+
+#budget>div .budget-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#budget>div .budget-text i {
+    font-size: 60px;
+    text-align: center;
+
+
+}
+
+#budget>div .budget-text h1 {
+    color: #fff;
+}
+
+#budget>div .budget-text p {
+    color: #fff;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+#budget>div .button {
+    margin-top: 50px;
+
+
+
+}
+
+#budget>div .button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border: 1px solid #ffffff;
+    padding: 15px 29px;
+    border-radius: 30px;
+
+}
+
+#budget>div .button a i {
+    color: green !important;
+
+}
+
+
+#map {
+
+    margin-top: 5px;
+    background-color: #fff;
+}
+
+#map iframe {
+    width: 100vw;
+
+
+}
+
+footer {
+    text-align: center;
+    padding: 14px 5px;
+    background-color: #222324;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+
+}
+
+footer div {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+footer div a {
+
+    text-decoration: none;
+    color: #FFC947;
+}
+#btnSide {
+    position:fixed;
+    right: 15px;
+    bottom: 40px;
+    background-color: transparent;
+    width: 60px;
+    border: transparent;
+}
+#btnSide {
+    font-size: 3rem;
+}
+
+#btnTopo {
+    position: fixed;
+    left: 15px; /* Define a posição à esquerda */
+    bottom: 40px; /* Fica na parte inferior */
+    z-index: 10; /* Sobre todos os elementos */
+     
+    color: rgba(5, 5, 5, 0.658);
+    padding: 0px 0px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+#btnTopo.mostrar {
+    opacity: 1; /* Exibe quando o usuário desce */
+}
+
+
+
+#btnTopo i {
+   font-size: 3rem;
+}
+
+.onlyMobile {
+    display: block;
+    text-decoration: none;
+    margin: 50px;
+    color: #000;
+}
