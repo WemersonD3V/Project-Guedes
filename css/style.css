@@ -7,9 +7,12 @@
 }
 
 
-html, body {
-    overflow-x: hidden; /* Impede scroll lateral */
-    width: 100vw; /* Garante que o conteúdo não ultrapasse a largura da tela */
+html,
+body {
+    overflow-x: hidden;
+    /* Impede scroll lateral */
+    width: 100vw;
+    /* Garante que o conteúdo não ultrapasse a largura da tela */
 }
 
 body {
@@ -100,8 +103,8 @@ header>div,
     box-shadow: 2px solid #E6AA42;
 }
 
-#menu-hamburg  i{
-   font-size: 1.8rem;
+#menu-hamburg i {
+    font-size: 1.8rem;
 
 }
 
@@ -183,10 +186,19 @@ header>div,
 }
 
 @keyframes borda-circulando {
-    0% { border: 1px solid red; }
-    50% { border: 1px solid yellow; }
-    100% { border: 1px solid red; }
+    0% {
+        border: 1px solid red;
+    }
+
+    50% {
+        border: 1px solid yellow;
+    }
+
+    100% {
+        border: 1px solid red;
+    }
 }
+
 #content-cabecalho .button {
 
     border: 3px solid rgb(255, 255, 255);
@@ -199,7 +211,7 @@ header>div,
 
 
 }
- 
+
 
 
 
@@ -514,7 +526,7 @@ header>div,
 }
 
 #budget>div .button {
-   margin: 50px 0;
+    margin: 50px 0;
 
 
 
@@ -569,24 +581,29 @@ footer div a {
     text-decoration: none;
     color: #FFC947;
 }
+
 #btnSide {
-    position:fixed;
+    position: fixed;
     right: 15px;
     bottom: 40px;
     background-color: transparent;
     width: 60px;
     border: transparent;
 }
+
 #btnSide {
     font-size: 3rem;
 }
 
 #btnTopo {
     position: fixed;
-    left: 15px; /* Define a posição à esquerda */
-    bottom: 40px; /* Fica na parte inferior */
-    z-index: 10; /* Sobre todos os elementos */
-     
+    left: 15px;
+    /* Define a posição à esquerda */
+    bottom: 40px;
+    /* Fica na parte inferior */
+    z-index: 10;
+    /* Sobre todos os elementos */
+
     color: rgba(5, 5, 5, 0.658);
     padding: 0px 0px;
     border: none;
@@ -601,13 +618,14 @@ footer div a {
 
 
 #btnTopo.mostrar {
-    opacity: 1; /* Exibe quando o usuário desce */
+    opacity: 1;
+    /* Exibe quando o usuário desce */
 }
 
 
 
 #btnTopo i {
-   font-size: 3rem;
+    font-size: 3rem;
 }
 
 .onlyMobile {
