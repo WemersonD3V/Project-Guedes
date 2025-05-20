@@ -41,11 +41,14 @@ document.getElementById("btnTopo").addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
   const botao = document.getElementById("btnTopo");
+  const botaoSide = document.getElementById("btnSide");
 
   if (window.scrollY > 100) {
     // Se o usuário tiver descido mais de 100px
     botao.classList.add("mostrar"); // Torna visível
+    botaoSide.classList.add("mostrar"); // Torna visível
   } else {
     botao.classList.remove("mostrar"); // Esconde quando está no topo
+    botaoSide.classList.remove("mostrar"); // Esconde quando está no topo
   }
 });
