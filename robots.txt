@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://guedestattoo.vercel.app/sitemap.xml
