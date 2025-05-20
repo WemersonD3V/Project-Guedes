@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MHJMM2W3CG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MHJMM2W3CG");
+    </script>
+
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Guedes Tattoo - Tatuagens e piercings com propósito em Januária-MG. Arte, segurança e expressão com Gean Guedes e Layana. Agende já!"
+    />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0 , user-scalable=no"
     />
-    
+    <meta
+      property="og:title"
+      content="Guedes Tattoo - Tatuagem e Piercing em Januária"
+    />
+    <meta
+      property="og:description"
+      content="Transforme sua história em arte com o Guedes Tattoo. Agende já!"
+    />
+    <meta property="og:image" content="image/logo.jpg" />
+    <meta property="og:url" content="https://guedestattoo.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "Guedes Tattoo",
+        "image": "https://seusite.vercel.app/image/logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Sete, 270 - Jardim Daniel",
+          "addressLocality": "Januária",
+          "addressRegion": "MG",
+          "postalCode": "39480-000",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -15.4684681,
+          "longitude": -44.3739584
+        },
+        "url": "https://guedestattoo.vercel.app",
+        "telephone": "+55-38-99964-6929",
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "sameAs": [
+          "https://www.instagram.com/guedes_tatoo",
+          "https://www.instagram.com/layanabenevidespiercer"
+        ]
+      }
+    </script>
+
     <title>Guedes Tattoo</title>
-    <link rel="icon" type="image/x-icon" href="image/galery/favicon/high-voltage_26a1.gif">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="image/galery/favicon/high-voltage_26a1.gif"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/4800be241c.js"
@@ -16,6 +81,11 @@
     ></script>
   </head>
   <body>
+    <div id="loading">
+      <img src="image/galery/favicon/high-voltage_26a1.gif" alt="carregando...">
+
+    </div>
+
     <header>
       <div>
         <div id="cabecalho">
@@ -25,7 +95,7 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#history-aboutus">Sobre Nós</a></li>
+              <li><a href="#history-aboutus">Sobre Nós</a> </li>
               <li><a href="#team-specialist">Tatuadores</a></li>
               <li><a href="#gallery-content">Galeria</a></li>
               <li><a href="#budget">Conecte-se Conosco</a></li>

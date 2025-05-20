@@ -79,6 +79,23 @@ header {
     background-position: center left;
     background-size: cover;
 }
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 4.0s ease-in-out opacity;
+}
+
+#loading img {
+    width: 50px;
+}
+
+
 
 header>div,
 #pircing-promotion>div {
@@ -98,9 +115,10 @@ header>div,
 }
 
 #cabecalho img {
-    width: 90px;
+    width: 80px;
     border-radius: 50%;
-    box-shadow: 2px solid #E6AA42;
+    box-shadow: 0 0 4px #E6AA42;
+
 }
 
 #menu-hamburg i {
@@ -592,7 +610,8 @@ footer div a {
     width: 60px;
     border: transparent;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;font-size: 3rem;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 3rem;
 }
 
 
@@ -618,7 +637,8 @@ footer div a {
 
 
 
-#btnTopo.mostrar , #btnSide.mostrar {
+#btnTopo.mostrar,
+#btnSide.mostrar {
     opacity: 1;
     /* Exibe quando o usuário desce */
 }
@@ -636,13 +656,26 @@ footer div a {
     color: #000;
 }
 
-@media (min-width: 460px) and (max-width: 800px) {
+@media (min-width: 460px) and (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
+    #specialists .solo-specialist .text {
+        margin: -91px 0px -9px 66px;
+        padding-right: 173px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
     body {
         max-width: 800px;
     }
-    #specialists .solo-specialist .text{ margin: -84px 0px -9px 226px;
+
+    #specialists .solo-specialist .text {
+        margin: -84px 0px -9px 115px;
         padding-right: 342px;
     }
-      
 
-} 
+
+}

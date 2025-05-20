@@ -1,13 +1,22 @@
 if (window.innerWidth > 768) {
   // Se a largura for maior que 768px (Desktop)
   document.body.innerHTML = `
-    <a class='onlyMobile' target="_blank" href="https://www.instagram.com/guedes_tatoo/">
-         
-    </a>
+    
+  <h1>Acesso permitido apenas via Mobile 📱</h1>
 `;
 
 window.alert("Acesso permitido apenas via Mobile 📱");
 }
+
+//carregamento da pagina 
+window.addEventListener("load", function() {
+  setTimeout(()=>{
+    document.getElementById("loading").style.opacity = "0";
+    document.getElementById("loading").style.display = "none";
+  },1000)  
+  
+});
+
 
 // codigo feito para mudar a tonalida ao aproximar com o scroll
 
