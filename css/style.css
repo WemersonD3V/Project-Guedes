@@ -86,7 +86,7 @@ header {
 }
 
 .seta {
-    margin-top: 50px;
+    margin-top: 15px;
     animation: moverBaixo 3s infinite ease-in-out;
 }
 
