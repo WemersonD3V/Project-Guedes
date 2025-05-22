@@ -1,12 +1,12 @@
-if (window.innerWidth > 768) {
-  // Se a largura for maior que 768px (Desktop)
-  document.body.innerHTML = `
+// if (window.innerWidth > 768) {
+//   // Se a largura for maior que 768px (Desktop)
+//   document.body.innerHTML = `
     
-  <h1>Acesso permitido apenas via Mobile 📱</h1>
-`;
+//   <h1>Acesso permitido apenas via Mobile 📱</h1>
+// `;
 
-window.alert("Acesso permitido apenas via Mobile 📱");
-}
+// window.alert("Acesso permitido apenas via Mobile 📱");
+// }
 
 //carregamento da pagina 
 window.addEventListener("load", function() {
