@@ -109,7 +109,18 @@
     />
 
     <link rel="preload" as="image" href="image/imagem-cabecalho.webp" type="image/webp" />
+    <link rel="canonical" href="https://guedestattoo.vercel.app/" />
+    <link rel="manifest" href="image/galery/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#222324" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/4800be241c.js"
       crossorigin="anonymous"
@@ -119,16 +130,28 @@
     <header>
       <div>
         <div id="cabecalho">
-          <img src="image/logo.webp" width="200" height="200" alt="logo principal de GUEDES tatto" />
-          <div id="menu-hamburg">
-            <i class="fa-solid fa-bars fa-xs" style="color: #ffd43b"></i>
-          </div>
-          <nav>
+          <img
+            src="image/logo.webp"
+            width="200"
+            height="200"
+            alt="Logo da Guedes Tattoo"
+          />
+          <button
+            type="button"
+            id="menu-hamburg"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+          >
+            <i class="fa-solid fa-bars fa-xs" style="color: var(--dourado)"></i>
+          </button>
+          <nav id="menu-principal">
             <ul>
               <li><a href="#history-aboutus">Sobre Nós</a></li>
-              <li><a href="#team-specialist">Tatuadores</a></li>
+              <li><a href="#team-specialist">Equipe</a></li>
               <li><a href="#gallery-content">Galeria</a></li>
-              <li><a href="#budget">Conecte-se Conosco</a></li>
+              <li><a href="#budget">Orçamento</a></li>
+              <li><a href="#localizacao">Localização</a></li>
             </ul>
           </nav>
         </div>
@@ -143,29 +166,33 @@
           <div class="button">
             <a
               target="_blank"
-              href="https://api.whatsapp.com/send?phone=5538999646929&text=Guedes_tatoo"
+              data-origem="topo"
+              href="https://api.whatsapp.com/send?phone=5538999646929&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consultoria%20de%20tatuagem."
               >AGENDE UMA CONSULTORIA AGORA</a
             >
-            
           </div>
-          <svg width="50" height="50" viewBox="0 0 50 50" class="seta">
-          <path
-            d="M10 20 L25 35 L40 20"
-            stroke="white"
-            stroke-width="2"
-            fill="none"
-          />
-        </svg>
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            class="seta"
+            aria-hidden="true"
+          >
+            <path
+              d="M10 20 L25 35 L40 20"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
         </div>
-        
       </div>
     </header>
     <main>
       <section id="history-aboutus">
         <div>
-          <h2>Sobre Nós</h2>
-          <!-- <h2>Arte com propósito</h2> -->
-          <h1>Histórias que se eternizam na pele</h1>
+          <p class="sobretitulo">Sobre Nós</p>
+          <h2 class="titulo">Histórias que se eternizam na pele</h2>
         </div>
         <div class="history-text">
           <p>
@@ -174,7 +201,6 @@
             estúdio entrega identidade, cuidado e expressão. Um espaço onde cada
             cliente é ouvido, respeitado e marcado com propósito.
           </p>
-          <br />
           <p>
             À frente do estúdio está Gean Marcos Guedes, nascido em 1996 em
             Januária (MG). Desde pequeno, já mostrava talento desenhando
@@ -184,9 +210,8 @@
             cidade e fundou o Guedes Tattoo Studio, unindo técnica,
             sensibilidade e autenticidade.
           </p>
-          <br />
           <p>
-            Ao lado de Gean, está Layana, responsável pelos piercings. Juntos,
+            Ao lado de Gean está Layana, responsável pelos piercings. Juntos,
             eles compartilham uma missão: elevar a autoestima e contar histórias
             por meio da arte no corpo — com segurança, respeito e paixão em cada
             atendimento.
@@ -194,10 +219,21 @@
         </div>
 
         <div class="img-history">
-          <img src="image/sign.webp" width="400" height="404" loading="lazy" decoding="async" alt="assinatura do guedes" />
           <img
-            src="image/about-us-image.webp" width="400" height="400" loading="lazy" decoding="async"
-            alt="Uma Mão com um aparelho de tattoar"
+            src="image/sign.webp"
+            width="400"
+            height="404"
+            loading="lazy"
+            decoding="async"
+            alt="Assinatura de Gean Guedes"
+          />
+          <img
+            src="image/about-us-image.webp"
+            width="400"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            alt="Ilustração de uma mão segurando uma máquina de tatuagem"
           />
         </div>
       </section>
@@ -206,28 +242,33 @@
           <div>
             <h3>OFERTA ESPECIAL POR TEMPO LIMITADO</h3>
             <h3>JOIA + PERFURAÇÃO</h3>
-            <h3>A partir de R$ 60 reais!</h3>
+            <h3>A partir de R$ 60!</h3>
           </div>
           <div class="button">
             <a
               target="_blank"
+              data-origem="promocao-piercing"
               href="https://api.whatsapp.com/message/KMY6JCB3NZOON1?autoload=1&app_absent=0"
               >AGENDAR AGORA</a
             >
           </div>
-          <p>Promoção válida de segunda à sexta-feira, com joias de titânio.</p>
+          <p>Promoção válida de segunda a sexta-feira, com joias de titânio.</p>
         </div>
       </section>
       <section id="team-specialist">
         <div>
-          <i class="fa-solid fa-people-group" style="color: #ffd43b"></i>
+          <i
+            class="fa-solid fa-people-group"
+            style="color: var(--dourado)"
+            aria-hidden="true"
+          ></i>
         </div>
         <div>
-          <h3>NOSSOS ESPECIALISTAS</h3>
+          <h2>NOSSOS ESPECIALISTAS</h2>
           <p>
             Desde 2020, eternizando histórias na pele. Nossa equipe conta com um
-            tatuador profissional e um body piercer, prontos para oferecer arte
-            e qualidade. Conheça mais sobre nossos artistas! Clique na foto e
+            tatuador profissional e uma body piercer, prontos para oferecer arte
+            e qualidade. Conheça mais sobre nossos artistas! Toque na foto e
             confira o trabalho de cada um:
           </p>
         </div>
@@ -236,13 +277,21 @@
             <a target="_blank" href="https://www.instagram.com/gean.guedes/">
               <div class="solo-specialist">
                 <div class="img">
-                  <img src="image/test.webp" width="800" height="1084" loading="lazy" decoding="async" alt="Guedes Tattoo " />
+                  <img
+                    src="image/test.webp"
+                    width="800"
+                    height="1084"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Foto do tatuador Gean Marcos Guedes"
+                  />
                 </div>
                 <div class="text">
                   <span
                     ><i
                       class="fa-brands fa-instagram fa-rotate-90"
-                      style="color: #ffd43b"
+                      style="color: var(--dourado)"
+                      aria-hidden="true"
                     ></i
                     >GEAN.GUEDES</span
                   >
@@ -258,13 +307,21 @@
             >
               <div class="solo-specialist">
                 <div class="img">
-                  <img src="image/test2.webp" width="800" height="800" loading="lazy" decoding="async" alt="layana benevides" />
+                  <img
+                    src="image/test2.webp"
+                    width="800"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Foto da body piercer Layana Benevides"
+                  />
                 </div>
                 <div class="text">
                   <span
                     ><i
                       class="fa-brands fa-instagram fa-rotate-90"
-                      style="color: #ffd43b"
+                      style="color: var(--dourado)"
+                      aria-hidden="true"
                     ></i
                     >LAYANABENEVIDES</span
                   >
@@ -279,85 +336,125 @@
       <section id="gallery-content">
         <div class="logo-insta">
           <a target="_blank" href="https://www.instagram.com/guedes_tatoo/">
-            <img src="image/logo.webp" width="200" height="200" loading="lazy" decoding="async" alt="logo do instagram" />
+            <img
+              src="image/logo.webp"
+              width="200"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              alt=""
+            />
             <span>GUEDES_TATOO</span>
           </a>
         </div>
         <div class="logo-insta">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/laybpiercing/"
-          >
-            <img src="image/logo2.webp" width="120" height="123" loading="lazy" decoding="async" alt="logo do instagram" />
+          <a target="_blank" href="https://www.instagram.com/laybpiercing/">
+            <img
+              src="image/logo2.webp"
+              width="120"
+              height="123"
+              loading="lazy"
+              decoding="async"
+              alt=""
+            />
             <span>LAYANABENEVIDESPIERCER</span>
           </a>
         </div>
         <div>
           <h3>
-            Descubra nossos artistas e inspirações. Clique e explore nosso
-            Instagram!
+            Descubra nossos artistas e inspirações. Toque nas fotos para
+            ampliar e explore nosso Instagram!
           </h3>
         </div>
 
         <div id="gallery-img">
-          <div>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/tat1.webp" width="900" height="1599" loading="lazy" decoding="async"
-              alt="tattoagem egipicia em
-            mumia"
+              src="image/galery/tat1.webp"
+              width="900"
+              height="1599"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem realista de caveira com coroa de faraó nas costas"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/tat2.webp" width="900" height="1269" loading="lazy" decoding="async"
-              alt="tattoagem do gohan de dragon ball z"
+              src="image/galery/tat2.webp"
+              width="900"
+              height="1269"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem do Gohan, de Dragon Ball Z"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/tat3.webp" width="675" height="1080" loading="lazy" decoding="async"
-              alt="tattoagem da medusa da mitologia grega"
+              src="image/galery/tat3.webp"
+              width="675"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem da Medusa, da mitologia grega"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/tat4.webp" width="620" height="1080" loading="lazy" decoding="async"
-              alt="tattoagem com simbolos do leão e uma referencia japonesa"
+              src="image/galery/tat4.webp"
+              width="620"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem de leão com referências japonesas"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/tat5.webp" width="783" height="1101" loading="lazy" decoding="async"
-              alt="tattoagem com simbolos do leão"
+              src="image/galery/tat5.webp"
+              width="783"
+              height="1101"
+              loading="lazy"
+              decoding="async"
+              alt="Tatuagem de leão"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/pir1.webp" width="900" height="900" loading="lazy" decoding="async"
-              alt="pircing aplicado sobre o nariz"
+              src="image/galery/pir1.webp"
+              width="900"
+              height="900"
+              loading="lazy"
+              decoding="async"
+              alt="Piercing no nariz"
             />
-          </div>
-          <div>
+          </button>
+          <button type="button" class="gallery-item">
             <img
-              src="image/galery/pir2.webp" width="900" height="900" loading="lazy" decoding="async"
-              alt="pircing aplicado sobre a orelha"
+              src="image/galery/pir2.webp"
+              width="900"
+              height="900"
+              loading="lazy"
+              decoding="async"
+              alt="Piercing na orelha"
             />
-          </div>
+          </button>
         </div>
         <div class="button">
           <a target="_blank" href="https://www.instagram.com/guedes_tatoo/">
-            <span
-              ><i class="fa-brands fa-instagram" style="color: #000000"></i
-              >Visite Nosso Instagram</span
-            >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>Visite
+            Nosso Instagram
           </a>
         </div>
       </section>
       <section id="budget">
         <div>
           <div class="budget-text">
-            <i class="fa-solid fa-calculator" style="color: #ffd43b"></i>
-            <h1>COMO FAÇO MEU ORÇAMENTO?</h1>
+            <i
+              class="fa-solid fa-calculator"
+              style="color: var(--dourado)"
+              aria-hidden="true"
+            ></i>
+            <h2 class="titulo">Como faço meu orçamento?</h2>
             <p>
               Para orçamentos e agendamentos, fale com nossa equipe via
               WhatsApp! Estamos disponíveis de segunda a sábado, das 9h às 18h.
@@ -366,30 +463,60 @@
           <div class="button">
             <a
               target="_blank"
-              href="https://api.whatsapp.com/send?phone=5538999646929&text=Guedes_tatoo"
+              data-origem="orcamento"
+              href="https://api.whatsapp.com/send?phone=5538999646929&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
             >
-              <i class="fa-brands fa-whatsapp" style="color: #ffd43b"></i>
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               WHATSAPP</a
             >
           </div>
         </div>
-
-        <div></div>
       </section>
-      <section id="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.296639607238!2d-44.3739584!3d-15.4684681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7542baf302f4da9%3A0x11ae528adc628374!2sGuedes%20Tattoo!5e0!3m2!1spt-BR!2sbr!4v1747699862541!5m2!1spt-BR!2sbr"
-          width="400"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <section id="localizacao">
+        <div class="localizacao-texto">
+          <p class="sobretitulo">Onde estamos</p>
+          <h2 class="titulo">Venha nos visitar</h2>
+          <address>
+            <p>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span
+                >R. Sete, 270 - Jardim Daniel<br />Januária - MG, 39480-000</span
+              >
+            </p>
+            <p>
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <span>Segunda a sábado, das 9h às 18h</span>
+            </p>
+          </address>
+          <div class="button">
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/dir/?api=1&destination=-15.4684681,-44.3739584"
+            >
+              <i class="fa-solid fa-route" aria-hidden="true"></i>
+              COMO CHEGAR</a
+            >
+          </div>
+        </div>
+        <div id="map">
+          <iframe
+            title="Mapa com a localização da Guedes Tattoo"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.296639607238!2d-44.3739584!3d-15.4684681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7542baf302f4da9%3A0x11ae528adc628374!2sGuedes%20Tattoo!5e0!3m2!1spt-BR!2sbr!4v1747699862541!5m2!1spt-BR!2sbr"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </main>
     <footer>
-      <h4>GUEDES_TATOO - Todos os direitos reservados 2025 ©</h4>
+      <h4>
+        GUEDES TATTOO © <span id="ano">2026</span> · Todos os direitos
+        reservados
+      </h4>
       <div>
         Feito com ❤️
         <a target="_blank" href="https://www.instagram.com/_.wemerson/"
@@ -397,14 +524,35 @@
         >
       </div>
     </footer>
-    <button id="btnTopo"><i class="fa-regular fa-circle-up"></i></button>
+
+    <button type="button" id="btnTopo" aria-label="Voltar ao topo">
+      <i class="fa-regular fa-circle-up" aria-hidden="true"></i>
+    </button>
 
     <a
+      id="btnSide"
       target="_blank"
-      href="https://api.whatsapp.com/send?phone=5538999646929&text=Guedes_tatoo"
-      ><button id="btnSide">
-        <i class="fa-brands fa-whatsapp" style="color: #63e6be"></i></button
-    ></a>
+      data-origem="botao-flutuante"
+      aria-label="Fale conosco pelo WhatsApp"
+      href="https://api.whatsapp.com/send?phone=5538999646929&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Guedes%20Tattoo%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+    >
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <dialog id="lightbox" aria-label="Foto ampliada da galeria">
+      <button type="button" class="lb-fechar" aria-label="Fechar">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="lb-anterior" aria-label="Foto anterior">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button type="button" class="lb-proxima" aria-label="Próxima foto">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </dialog>
   </body>
-  <script src="js/script.js"></script>
 </html>

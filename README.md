@@ -1,45 +1,56 @@
-# Project-Guedes
+# Guedes Tattoo
 
+Site do **Guedes Tattoo Studio**, estúdio de tatuagem e piercing em Januária-MG.
 
-```md
-# 🚀 Projeto: Menu Responsivo com Botão de Scroll para o Topo  
+🔗 https://guedestattoo.vercel.app
 
-Este projeto cria um **menu responsivo** que aparece ao clicar em um botão e um **botão de rolagem** que desaparece ao chegar ao topo da página. Ele foi projetado para funcionar **exclusivamente em dispositivos móveis**.  
+## O que tem no site
 
-## 📌 Funcionalidades  
-✅ **Menu hamburguer interativo** – aparece ao clicar e tem animação suave  
-✅ **Botão de scroll para o topo** – desaparece quando o usuário chega ao topo da página  
-✅ **Bloqueio para desktops** – apenas mobile pode acessar  
+- História do estúdio e da equipe (Gean Guedes e Layana Benevides)
+- Promoção de piercing
+- Galeria de trabalhos com foto ampliada (lightbox, com setas e deslize no celular)
+- Orçamento e agendamento pelo WhatsApp
+- Endereço, horário, botão "Como chegar" e mapa
 
-## 🛠️ Tecnologias Utilizadas  
-- HTML5  
-- CSS3 (com animações usando `@keyframes` e `transition`)  
-- JavaScript (para manipulação do DOM e interações)  
+## Tecnologias
 
-## 📂 Estrutura do Projeto  
+HTML, CSS e JavaScript puros, sem framework e sem build. Hospedado na Vercel.
+
 ```
-📁 projeto-menu-mobile  
- ├── 📄 index.html  # Estrutura da página  
- ├── 📄 style.css  # Estilos e animações  
- ├── 📄 script.js  # Lógica do menu e botão de topo  
- ├── 📄 README.md  # Documentação  
+index.html          página única
+css/style.css       estilos (mobile-first, breakpoints em 600px e 900px)
+js/script.js        menu, lightbox, botões flutuantes e medição de cliques
+image/              imagens em WebP (exceto logo.jpg, usada no compartilhamento)
+.claude/skills/     guia de design do projeto (guedes-design-system)
 ```
 
-## 📢 Como Usar  
-1️⃣ Clone este repositório:  
+## Rodando localmente
+
+Basta servir a pasta com qualquer servidor estático, por exemplo:
+
 ```sh
-git clone https://github.com/seu-usuario/projeto-menu-mobile.git
-```  
-2️⃣ Abra `index.html` em um navegador compatível.  
+npx http-server -p 5500
+```
 
-3️⃣ Experimente o menu mobile e veja a animação do botão de rolagem!  
+e abrir http://localhost:5500.
 
-## 📲 Compatibilidade  
-✅ Funciona em **Chrome, Firefox, Safari, Edge**  
-✅ Ideal para **mobile (Android & iOS)**  
-❌ **Não compatível com desktop**  
+## Medição (Google Analytics)
 
+O site envia eventos para o GA4 ao clicar em:
 
+| Evento | Quando |
+|---|---|
+| `whatsapp_click` | qualquer botão de WhatsApp (parâmetro `origem` indica qual) |
+| `instagram_click` | links do Instagram |
+| `como_chegar_click` | botão "Como chegar" |
+| `galeria_foto_aberta` | foto ampliada na galeria |
 
-Esse README ajuda usuários a entenderem **como usar e testar** o projeto. Você pode personalizá-lo para incluir mais informações! 🚀📜
+## Imagens
 
+Novas imagens devem ser convertidas para WebP e redimensionadas
+(galeria até 900px de largura, fundos até 1024px), com `width`, `height`
+e `loading="lazy"` no HTML.
+
+---
+
+Feito por [WemersonDEV](https://www.instagram.com/_.wemerson/)
