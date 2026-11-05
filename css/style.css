@@ -633,6 +633,109 @@ html:has(#lightbox[open]) {
     margin-right: 5px;
 }
 
+/* ===== Depoimentos ===== */
+/* Escondida enquanto não houver nenhum depoimento real cadastrado */
+#depoimentos:not(:has(.depoimento)) {
+    display: none;
+}
+
+#depoimentos {
+    padding: 2.5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#depoimentos .sobretitulo,
+#depoimentos .titulo {
+    padding: 0 var(--gutter);
+}
+
+/* Celular: carrossel com rolagem lateral e "encaixe" em cada card */
+.depoimentos-lista {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 8px var(--gutter) 16px;
+    scroll-padding: 0 var(--gutter);
+    scrollbar-width: thin;
+}
+
+.depoimento {
+    flex: 0 0 85%;
+    max-width: 360px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.depoimento .estrelas {
+    display: flex;
+    gap: 4px;
+    color: var(--dourado);
+    font-size: 0.95rem;
+}
+
+.depoimento blockquote {
+    flex: 1;
+    position: relative;
+}
+
+.depoimento blockquote p {
+    text-align: left;
+    color: var(--texto);
+    font-style: italic;
+}
+
+.depoimento .autor {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 12px;
+    border-top: 1px solid #F0F0F0;
+}
+
+.depoimento .nome {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.depoimento .fonte {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: #A3A3A3;
+}
+
+.depoimentos-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem var(--gutter) 0;
+}
+
+.depoimentos-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: var(--dourado);
+    text-underline-offset: 4px;
+}
+
+.depoimentos-links a i {
+    color: var(--dourado);
+}
+
 /* ===== Orçamento ===== */
 #budget {
     background: url('../image/orcamento.webp') center / cover;
@@ -744,16 +847,28 @@ html:has(#lightbox[open]) {
 /* ===== Rodapé ===== */
 footer {
     text-align: center;
-    padding: 14px var(--gutter) 80px;
-    /* espaço extra para os botões flutuantes não cobrirem o texto */
+    /* laterais largas no celular: o texto fica no meio, entre os botões flutuantes */
+    padding: 12px 80px;
     background-color: var(--escuro);
     font-family: 'Oswald', sans-serif;
     color: #fff;
 }
 
+footer h4 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
 footer div {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+@media (min-width: 600px) {
+    footer {
+        padding: 12px var(--gutter);
+    }
 }
 
 footer div a {
@@ -902,5 +1017,23 @@ footer div a {
 
     #gallery-img .gallery-item {
         margin-bottom: 1.5rem;
+    }
+
+    /* Desktop: depoimentos em grade, sem carrossel */
+    #depoimentos {
+        padding: 4rem 0;
+    }
+
+    .depoimentos-lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        overflow: visible;
+    }
+
+    /* 3 por linha; a última linha fica centralizada */
+    .depoimento {
+        flex: 0 0 calc((100% - 48px) / 3);
+        max-width: none;
     }
 }
