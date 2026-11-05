@@ -8,14 +8,6 @@
 // window.alert("Acesso permitido apenas via Mobile 📱");
 // }
 
-//carregamento da pagina 
-window.addEventListener("load", function() {
-  setTimeout(()=>{
-    document.getElementById("loading").style.opacity = "0";
-    document.getElementById("loading").style.display = "none";
-  },1000)  
-  
-});
 
 
 // codigo feito para mudar a tonalida ao aproximar com o scroll
@@ -36,12 +28,16 @@ document.addEventListener("scroll", function () {
   });
 });
 
-let menuBurger = document.querySelector("#menu-hamburg");
+const menuBurger = document.querySelector("#menu-hamburg");
+const menu = document.querySelector("#cabecalho nav");
 
 menuBurger.addEventListener("click", () => {
-  const menu = document.querySelector("#cabecalho nav");
   menu.classList.toggle("active");
-  console.log(menu.style.display);
+});
+
+// Fecha o menu mobile ao tocar em um link
+menu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => menu.classList.remove("active"));
 });
 
 document.getElementById("btnTopo").addEventListener("click", () => {
